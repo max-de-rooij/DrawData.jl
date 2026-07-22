@@ -13,11 +13,11 @@ module DrawData
 	    return Canvas(colors, names)
 	end
 
-    function AbstractPlutoDingetjes.Bonds.initial_value(::Type{Canvas})
+    function AbstractPlutoDingetjes.Bonds.initial_value(c::Canvas)
         Tuple{Float64, Float64, Int}[]
     end
 
-    function AbstractPlutoDingetjes.Bonds.transform_value(::Type{Canvas}, value)
+    function AbstractPlutoDingetjes.Bonds.transform_value(c::Canvas, value)
         [(z[1], z[2], z[3]) for z in value]
     end
 
