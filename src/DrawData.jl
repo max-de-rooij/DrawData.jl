@@ -13,7 +13,7 @@ module DrawData
 	    return Canvas(colors, names)
 	end
 
-    Base.get(c::Canvas) = Vector{Float64, Float64, Int}
+    AbstractPlutoDingetjes.Bonds.initial_value(::Type{Canvas}) = []
 
     function Base.show(io::IO, m::MIME"text/html", c::Canvas)
         show(io,m,build_canvas(c))
