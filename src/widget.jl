@@ -63,9 +63,6 @@ function build_canvas(c::Canvas)
         
         const root = currentScript.closest(".drawdata-widget");
         const output = root.querySelector(".canvas-value");
-
-        const bond = window.AbstractPlutoDingetjes.getBondValue;
-        const setValue = window.AbstractPlutoDingetjes.setBondValue;
         
         const canvas = root.querySelector("canvas");
         const ctx = canvas.getContext("2d");

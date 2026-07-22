@@ -88,8 +88,6 @@ end
         # Check for JavaScript elements
         @test contains(html_str, "script")
         @test contains(html_str, "currentScript")
-        @test contains(html_str, "getBondValue")
-        @test contains(html_str, "setBondValue")
     end
     
     @testset "Canvas HTML Includes Radio Buttons" begin
