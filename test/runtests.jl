@@ -48,7 +48,7 @@ end
 @testset "Build Canvas HTML Tests" begin
     @testset "Default Canvas Generates HTML" begin
         canvas = Canvas()
-        html_output = Tekenaar.build_canvas(canvas)
+        html_output = DrawData.build_canvas(canvas)
         
         # Check that output is not empty
         @test html_output !== nothing
@@ -71,7 +71,7 @@ end
             colors=[colorant"red", colorant"blue", colorant"green"],
             names=custom_names
         )
-        html_output = Tekenaar.build_canvas(canvas)
+        html_output = DrawData.build_canvas(canvas)
         html_str = string(html_output)
         
         # All custom names should appear in the HTML
@@ -82,7 +82,7 @@ end
     
     @testset "Canvas HTML Includes JavaScript" begin
         canvas = Canvas()
-        html_output = Tekenaar.build_canvas(canvas)
+        html_output = DrawData.build_canvas(canvas)
         html_str = string(html_output)
         
         # Check for JavaScript elements
@@ -94,7 +94,7 @@ end
     
     @testset "Canvas HTML Includes Radio Buttons" begin
         canvas = Canvas()
-        html_output = Tekenaar.build_canvas(canvas)
+        html_output = DrawData.build_canvas(canvas)
         html_str = string(html_output)
         
         # Check for radio button elements
@@ -104,7 +104,7 @@ end
     
     @testset "Canvas with Single Class HTML" begin
         canvas = Canvas(colors=[colorant"red"], names=["OnlyOne"])
-        html_output = Tekenaar.build_canvas(canvas)
+        html_output = DrawData.build_canvas(canvas)
         html_str = string(html_output)
         
         @test contains(html_str, "OnlyOne")
@@ -116,7 +116,7 @@ end
     @testset "Canvas is Properly Typed" begin
         canvas = Canvas()
         
-        @test isa(canvas, Tekenaar.Canvas)
+        @test isa(canvas, DrawData.Canvas)
         @test isa(canvas.colors, AbstractVector)
         @test isa(canvas.names, AbstractVector)
     end
