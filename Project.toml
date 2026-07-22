@@ -1,0 +1,16 @@
+name = "DrawData"
+uuid = "234671ac-4605-4ee0-8315-a3cd2ba04616"
+version = "0.1.0"
+authors = ["Max de Rooij <m.d.rooij@tue.nl>"]
+
+[deps]
+AbstractPlutoDingetjes = "6e696c72-6542-2067-7265-42206c756150"
+Colors = "5ae59095-9a9b-59fe-a467-6f913c188581"
+HypertextLiteral = "ac1192a8-f4b3-4bfe-ba22-af5b92cd3ab2"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[compat]
+AbstractPlutoDingetjes = "1.4.0"
+Colors = "0.13.1"
+HypertextLiteral = "1.0.0"
+Test = "1.11.0"
